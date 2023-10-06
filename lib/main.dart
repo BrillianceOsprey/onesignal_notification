@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
@@ -23,7 +25,7 @@ void main() async {
   print('permission granted :=> $isGranted');
 
   OneSignal.Notifications.addPermissionObserver((state) {
-    print("Has permission " + state.toString());
+    print("Has permission $state");
   });
 
   runApp(const MainApp());
